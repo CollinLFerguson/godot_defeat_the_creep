@@ -37,6 +37,7 @@ height = 66.0
 
 [node name="Player" type="Area2D" unique_id=179486619]
 script = ExtResource("1_i3pqv")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=414595200]
 scale = Vector2(0.5, 0.5)
@@ -47,3 +48,4 @@ animation = &"up"
 shape = SubResource("CapsuleShape2D_d076r")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="hit" from="." to="." method="game_over"]
